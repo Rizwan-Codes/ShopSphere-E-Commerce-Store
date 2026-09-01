@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+.fonta {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 1px;
+}
