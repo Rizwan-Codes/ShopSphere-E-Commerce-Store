@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
    return (
-      <article className="group overflow-hidden border border-slate-200 rounded-3xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-slate-200/70">
+      <article className="group overflow-hidden border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl hover:shadow-slate-200/70 transition-all duration-300 hover-transform hover:-translate-y-1">
          <Link
             to={`/NotFound`}
             className="relative block overflow-hidden bg-slate-100"
          >
             <img src={product.image}
-               className="h-64 w-full object-cover"
+               className="h-64 w-full object-cover transition duration-400 group-hover:scale-[1.07]"
             />
             <div className=" rounded-full absolute top-4 left-4 fonta border border-white/30 bg-white/90 px-3 py-1.5 text-xs font-bold text-slate-700 shadow-sm backdrop-blur">
                {product.category}
@@ -39,7 +39,7 @@ function ProductCard({ product }) {
                </Link>
             </div>
             <button
-              className="text-bold fonta text-white text-center p-3 w-full rounded-xl mt-3 bg-slate-950 transition hover:bg-blue-600"
+               className="text-bold fonta text-white text-center p-3 w-full rounded-xl mt-3 bg-slate-950 transition hover:bg-blue-600"
             >
                Add to Cart
             </button>
