@@ -1,15 +1,16 @@
-import products from "../../../E-commerce-Store/src/data/products";
+import products from "../data/products";
 import ProductCard from "../components/ProductCard";
 import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
+import SortSelect from "../components/SortSelect";
 
 
 function Products() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("all")
-
+  const [sortBy, setSortBy] = useState("Sort by");
 
   const categories = [
     ...new Set(products.map((products) => products.category)),
@@ -19,6 +20,14 @@ function Products() {
     const matchedQuery = product.title.toLowerCase().includes(searchTerm.trim().toLocaleLowerCase());
     const matchesCategory = category === "all" || product.category === category;
     return matchedQuery && matchesCategory;
+  }).sort((a, b) => {
+    if (sortBy === "price-low") {
+      return a.price - b.price;
+    }
+    if (sortBy === "price-high") {
+      return b.price - a.price;
+    }
+    return 0;
   });
 
   const mainproducts = products;
@@ -36,16 +45,17 @@ function Products() {
             value={searchTerm}
             onChange={setSearchTerm}
           />
-          <CategoryFilter 
-           value={category} 
-           onChange={setCategory}
-           categories={categories}
-            />
+          <CategoryFilter
+            value={category}
+            onChange={setCategory}
+            categories={categories}
+          />
+          <SortSelect
+            value={sortBy}
+            onChange={setSortBy}
+          />
         </div>
       </section>
-
-
-
 
       <section className="fonta mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>

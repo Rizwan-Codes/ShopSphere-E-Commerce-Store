@@ -8,7 +8,7 @@ function CategoryFilter({ value, onChange, categories }) {
                 id="category"
                 value={value}
                 onChange={(event) => onChange(event.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-indigo-100"
+                className="font-normal w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-indigo-100"
             >
                 <option value="all">All Categories</option>
 
