@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 function Navbar() {
 
     const navLinkClass = ({ isActive }) =>
-        `transition ${isActive ? "font-bold text-slate-900 text-[18px] fonta" : "text-[18px] fonta font-bold text-slate-500 hover:text-slate-900"}`;
+        `transition font-bold text-[18px] fonta ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
 
     return (
         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
@@ -15,7 +15,7 @@ function Navbar() {
                     Shop<span className="text-blue-600">Shpere</span>
                 </Link>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-8 mr-9">
                     <NavLink to="/" className={navLinkClass}>
                         Home
                     </NavLink>

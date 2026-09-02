@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
+import NotFound from "./pages/NotFound";
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/Products" element={<Products />} />
       <Route path="/Cart" element={<Cart />} />
+
+      <Route path="*" element={<NotFound />} />
     </Route>
   ))
   return (
