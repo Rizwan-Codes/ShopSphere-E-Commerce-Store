@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import ProductDetails from "./pages/ProductDetails";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
   ))
   return (
     <>
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </>
 
   )
