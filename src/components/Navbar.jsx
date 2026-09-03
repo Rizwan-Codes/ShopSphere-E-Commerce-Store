@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
+    const { cartItemsCount } = useCart();
 
     const navLinkClass = ({ isActive }) =>
         `transition font-bold text-[18px] fonta ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
@@ -24,7 +26,9 @@ function Navbar() {
                     </NavLink>
                     <NavLink to="/cart" className={({ isActive }) => `${navLinkClass({ isActive })} relative`}>
                         Cart
-                        <span className=" h-7 w-7 items-center justify-center bg-blue-600 text-[16px] text-white absolute inline-flex ml-2 rounded-full">82</span>
+                        <span className=" h-7 w-7 bg-blue-600 text-[16px] text-white absolute inline-flex items-center justify-center ml-2 rounded-full ">
+                            {cartItemsCount}
+                        </span>
                     </NavLink>
 
                 </div>
