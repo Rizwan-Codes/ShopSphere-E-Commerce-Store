@@ -5,7 +5,7 @@ function SortSelect({ value, onChange }) {
                 htmlFor="sort"
                 className="mb-2 block font-medium text-slate-500 ml-1"
             >
-                Category
+                Sort By
             </label>
 
             <select
