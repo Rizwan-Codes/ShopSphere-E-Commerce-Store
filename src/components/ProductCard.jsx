@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function ProductCard({ product }) {
+
+   const {
+      id,
+      title,
+      category,
+      price,
+      rating,
+      image,
+   } = product;
+
    return (
       <article className="group overflow-hidden border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl hover:shadow-slate-200/70 transition-all duration-300 hover-transform hover:-translate-y-1">
          <Link
-            to={`/NotFound`}
+            to={`/products/${id}`}
             className="relative block overflow-hidden bg-slate-100"
          >
             <img src={product.image}
@@ -20,7 +31,7 @@ function ProductCard({ product }) {
          <div className="p-5">
 
             <Link
-               to={`/NotFound`}
+               to={`/products/${id}`}
                className="font-medium text-[18px] line-clamp-2 min-h-20 leading-7 text-slate-900 transition-colors hover:text-blue-600"
             >
                {product.title}
@@ -32,7 +43,7 @@ function ProductCard({ product }) {
                </span>
 
                <Link
-                  to={`/products`}
+                  to={`/products/${id}`}
                   className="text-sm font-normal text-blue-500 transition hover:text-blue-700"
                >
                   View details

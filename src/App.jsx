@@ -5,6 +5,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } 
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />} />
       <Route path="/Products" element={<Products />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
       <Route path="/Cart" element={<Cart />} />
 
       <Route path="*" element={<NotFound />} />
