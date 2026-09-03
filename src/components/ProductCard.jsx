@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useCart } from "../context/CartContext";
+
 
 function ProductCard({ product }) {
+   const { addToCart } = useCart();
+   const [added, setAdded] = useState(false);
 
    const {
       id,
@@ -11,6 +15,16 @@ function ProductCard({ product }) {
       rating,
       image,
    } = product;
+
+   const handleAddToCart = () => {
+      addToCart(product);
+
+      setAdded(true);
+
+      setTimeout(() => {
+         setAdded(false);
+      }, 1500);
+   };
 
    return (
       <article className="group overflow-hidden border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl hover:shadow-slate-200/70 transition-all duration-300 hover-transform hover:-translate-y-1">
@@ -50,9 +64,18 @@ function ProductCard({ product }) {
                </Link>
             </div>
             <button
-               className="text-bold fonta text-white text-center p-3 w-full rounded-xl mt-3 bg-slate-950 transition hover:bg-blue-600"
+               type="button"
+               onClick={handleAddToCart}
+               whileTap={{
+                  scale: 0.97,
+               }}
+               aria-label={`Add ${title} to cart`}
+               className={`mt-5 w-full rounded-xl px-4 py-3 font-bold text-white transition ${added
+                  ? "bg-emerald-600"
+                  : "bg-slate-950 hover:bg-indigo-600"
+                  } `}
             >
-               Add to Cart
+               {added ? "Added to Cart ✓" : "Add to Cart"}
             </button>
          </div>
       </article>
