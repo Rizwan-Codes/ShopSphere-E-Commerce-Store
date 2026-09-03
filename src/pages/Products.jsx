@@ -35,8 +35,43 @@ function Products() {
   return (
     <main className="min-h-screen bg-slate-50">
 
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-slate-950">
+        
+        <div className="absolute -right-40 -top-40 h-112.5 w-112.5 rounded-full bg-indigo-600/20 blur-[120px]" />
+
+        <div className="absolute -bottom-40 -left-40 h-100 w-100 rounded-full bg-violet-600/20 blur-[120px]" />
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[70px_70px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div
+            className="max-w-3xl"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-400/20 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-300 backdrop-blur">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400 font-normal tracking-wide" />
+              Explore Our Collection
+            </span>
+
+            <h1 className="mt-6 fonta text-4xl font-medium tracking-wide text-white sm:text-5xl lg:text-6xl">
+              Find something
+              <span className="block bg-linear-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+                you'll love.
+              </span>
+            </h1>
+
+            <p className="mt-5 max-w-2xl text-base font-normal leading-7 text-slate-300 sm:text-lg">
+              Browse our curated collection of quality products.
+              Search, filter, and sort to find exactly what you're
+              looking for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Filter */}
       <section
-        className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+        className="relative z-10 mx-auto -mt-8 max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl shadow-slate-200/60 sm:p-6">
           <div
