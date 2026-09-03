@@ -1,6 +1,13 @@
 function SortSelect({ value, onChange }) {
     return (
-        <div>
+        <div className="w-full sm:max-w-xs">
+            <label
+                htmlFor="sort"
+                className="mb-2 block font-medium text-slate-500 ml-1"
+            >
+                Category
+            </label>
+
             <select
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
