@@ -4,7 +4,7 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
 import SortSelect from "../components/SortSelect";
-
+import EmptyState from "../components/EmptyState";
 
 function Products() {
 
@@ -37,7 +37,7 @@ function Products() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-950">
-        
+
         <div className="absolute -right-40 -top-40 h-112.5 w-112.5 rounded-full bg-indigo-600/20 blur-[120px]" />
 
         <div className="absolute -bottom-40 -left-40 h-100 w-100 rounded-full bg-violet-600/20 blur-[120px]" />
@@ -129,9 +129,10 @@ function Products() {
             ))}
           </div>
         ) : (
-          <div>
-            none of it
-          </div>
+          <EmptyState
+            title="No Products Found"
+            message="We couldn't find any products matching your search or filter. Try changing your search or category."
+          />
         )}
       </section>
 
