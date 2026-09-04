@@ -5,7 +5,7 @@ function Navbar() {
     const { cartItemsCount } = useCart();
 
     const navLinkClass = ({ isActive }) =>
-        `transition font-bold text-[18px] fonta ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
+        `transition font-medium fonta text-[18px]  ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
 
     return (
         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">

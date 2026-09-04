@@ -184,7 +184,7 @@ const products = [
     title: "Wireless Headphones",
     price: 12.99,
     description: "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    category: "Electronics",
+    category: "electronics",
     image: "https://i.pinimg.com/736x/70/95/d7/7095d7fe1b10b8d40016533826c89c1e.jpg",
     rating: 3.6,
   },
