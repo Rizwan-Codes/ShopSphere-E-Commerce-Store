@@ -468,56 +468,11 @@ Rather than being a simple static shopping page, the project focuses on building
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Rizwan Ali**
 
-Frontend Developer
+Frontend Web Developer
 
 ### Skills Demonstrated
 
 `React` · `JavaScript` · `Tailwind CSS` · `React Router` · `Context API` · `Responsive Design` · `Git`
 
----
-
-## ⭐ If you like this project
-
-If this project helped you learn React or inspired you, consider giving the repository a ⭐ on GitHub.
-
-````
-
-### ⚠️ 2 cheezen README mein baad mein update karna
-
-**1. Repository URL**
-
-Abhi:
-
-```bash
-git clone <your-repository-url>
-````
-
-mein apna actual GitHub URL daalna.
-
-**2. Author**
-
-`Your Name` ki jagah apna naam daal dena.
-
----
-
-### Git commit
-
-README add karne ke baad:
-
-```bash
-git add README.md
-```
-
-```bash
-git commit -m "docs: add comprehensive project README"
-```
-
-Phir:
-
-```bash
-git push
-```
-
-Ye README tumhare portfolio/GitHub repository ke liye kaafi professional foundation hai. Baad mein project complete hone par **live demo, screenshots, GitHub repo, features aur deployment section** bhi add kar denge.
