@@ -70,7 +70,7 @@ function ProductCard({ product }) {
                   scale: 0.97,
                }}
                aria-label={`Add ${title} to cart`}
-               className={`mt-5 w-full rounded-xl px-4 py-3 font-bold text-white transition ${added
+               className={`mt-5 w-full rounded-xl px-4 py-3 fonta text-white transition ${added
                   ? "bg-emerald-600"
                   : "bg-slate-950 hover:bg-indigo-600"
                   } `}

@@ -1,20 +1,27 @@
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
 import SortSelect from "../components/SortSelect";
 import EmptyState from "../components/EmptyState";
+import { useSearchParams } from "react-router-dom";
+
 
 function Products() {
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [category, setCategory] = useState("all")
+  const [searchParams] = useSearchParams();
+  const [category, setCategory] = useState(searchParams.get("category") || "all");
   const [sortBy, setSortBy] = useState("Sort by");
 
   const categories = [
     ...new Set(products.map((products) => products.category)),
   ];
+
+  useEffect(() => {
+    setCategory(searchParams.get("category") || "all");
+  }, [searchParams]);
 
   const filteredProducts = products.filter((product) => {
     const matchedQuery = product.title.toLowerCase().includes(searchTerm.trim().toLocaleLowerCase());
@@ -96,7 +103,7 @@ function Products() {
 
       {/* Products */}
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-">
+      <section id="products-section" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-">
 
         <div className="mb-2 fonta flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
