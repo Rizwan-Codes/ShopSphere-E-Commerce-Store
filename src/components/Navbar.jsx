@@ -8,7 +8,7 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinkClass = ({ isActive }) =>
-        `transition font-medium fonta text-[18px] ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
+        `transition font-medium fonta text-[16px] ${isActive ? "text-slate-900" : "text-slate-500 hover:text-slate-900"}`;
 
     const mobileNavLinkClass = ({ isActive }) =>
         `flex items-center justify-between rounded-xl px-4 py-3 transition font-medium fonta text-[16px] ${isActive ? "bg-blue-50 text-slate-900" : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"}`;
