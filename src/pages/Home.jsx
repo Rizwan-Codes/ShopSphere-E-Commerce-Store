@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
-
 function Home() {
     const featuredIds = [12, 3, 18, 5];
     const featuredProducts = featuredIds
@@ -37,7 +36,6 @@ function Home() {
             desc: "Our team is always here to help you out.",
         },
     ];
-
     return (
         <main className="min-h-screen bg-slate-50">
 
