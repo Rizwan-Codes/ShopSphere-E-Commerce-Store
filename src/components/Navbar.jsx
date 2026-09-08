@@ -25,7 +25,6 @@ function Navbar() {
                 >
                     Shop<span className="text-blue-600">Shpere</span>
                 </Link>
-
                 {/* Desktop links */}
                 <div className="hidden items-center gap-8 mr-9 md:flex">
                     <NavLink to="/" className={navLinkClass}>
